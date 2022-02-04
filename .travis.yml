@@ -1,9 +1,10 @@
 language: clojure
 sudo: required
-lein: lein 
+#lein: lein 
 dist: bionic
 arch: s390x
 
+before_install: sudo apt update && sudo apt install -y leiningen
 services:
   - docker
 
