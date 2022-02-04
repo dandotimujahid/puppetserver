@@ -4,7 +4,10 @@ sudo: required
 dist: bionic
 arch: s390x
 
-before_install: sudo apt update && sudo apt install -y leiningen
+before_install: 
+  - wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
+  - chmod +x lein
+  - sudo mv lein /usr/bin/
 services:
   - docker
 
