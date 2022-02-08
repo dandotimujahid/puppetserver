@@ -1,5 +1,4 @@
 language: clojure
-sudo: required
 lein:  
 dist: bionic
 arch: s390x
