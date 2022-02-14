@@ -21,9 +21,10 @@ before_install:
   #- sudo chmod +x  /usr/local/bin/
   #- cd /home/travis
   - sudo apt update && sudo apt install leiningen
-  - wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
-  - chmod +x lein
-  - sudo mv lein /usr/bin/
+  
+  #- wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
+  #- chmod +x lein
+  #- sudo mv lein /usr/bin/
   - PATH="$HOME/bin:$PATH"
   
 #before_script: cd /home/travis
