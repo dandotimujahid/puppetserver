@@ -1,26 +1,34 @@
-language: clojure
+#language: clojure
 sudo: required
 #group: edge
-lein: 2.9.1 
+#lein: 2.9.1 
 #dir: /home/travis
 dist: bionic
 arch: s390x
 
 before_install:
   - sudo apt-get update
-  - sudo chmod +x  /usr/local/bin/
+  - mkdir $HOME/bin && cd $HOME/bin
+  - curl https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein > lein
+  - sudo mv lein /usr/local/bin/lein
+  - sudo chmod a+x /usr/local/bin/lein
+  - sudo apt-get install -y bash curl rlwrap
+  - curl -O https://download.clojure.org/install/linux-install-1.10.2.774.sh
+  - chmod +x linux-install-1.10.2.774.sh
+  - sudo ./linux-install-1.10.2.774.sh
+  #- sudo chmod +x  /usr/local/bin/
   #- cd /home/travis
   #- sudo apt update && sudo apt install leiningen
   #- wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
   #- chmod +x lein
   #- sudo mv lein /usr/bin/
   
-before_script: cd /home/travis
+#before_script: cd /home/travis
 services:
   - docker
 
 script:
-  - cd /home/travis
+  #- cd /home/travis
   - ./ext/travisci/test.sh
   - $TRAVIS_BUILD_DIR/ext/travisci/secscan.sh "$TRAVIS_BUILD_DIR/src/clj" "clj"
 jobs:
