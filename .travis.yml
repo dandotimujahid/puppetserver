@@ -7,7 +7,7 @@ dist: bionic
 arch: s390x
 
 before_install:
-  -cd /home/travis
+  - cd /home/travis
   #- sudo apt update && sudo apt install leiningen
   #- wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
   #- chmod +x lein
