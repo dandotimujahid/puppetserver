@@ -1,6 +1,6 @@
 language: clojure
 lein: 2.9.8 
-dir: /home/travis
+#dir: /home/travis
 dist: bionic
 arch: s390x
 
@@ -13,6 +13,7 @@ services:
   - docker
 
 script:
+  - cd /home/travis
   - ./ext/travisci/test.sh
   - $TRAVIS_BUILD_DIR/ext/travisci/secscan.sh "$TRAVIS_BUILD_DIR/src/clj" "clj"
 jobs:
