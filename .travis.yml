@@ -8,6 +8,7 @@ arch: s390x
 
 before_install:
   - sudo apt-get update
+  - sudo apt update && sudo apt install leiningen
   - cd $HOME/bin
   #- curl https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein > lein
   #- sudo mv lein /usr/local/bin/lein
@@ -20,7 +21,6 @@ before_install:
   
   #- sudo chmod +x  /usr/local/bin/
   #- cd /home/travis
-  - sudo apt update && sudo apt install leiningen
   
   #- wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
   #- chmod +x lein
