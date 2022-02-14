@@ -9,6 +9,8 @@ before_install:
   #- wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
   #- chmod +x lein
   #- sudo mv lein /usr/bin/
+  
+before_script: cd /home/travis
 services:
   - docker
 
