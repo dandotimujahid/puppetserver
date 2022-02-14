@@ -1,13 +1,13 @@
 language: clojure
-#lein: 2.9.8 
+lein: 2.9.8 
 dist: bionic
 arch: s390x
 
 before_install:
-  - sudo apt update && sudo apt install leiningen
-  - wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
-  - chmod +x lein
-  - sudo mv lein /usr/bin/
+  #- sudo apt update && sudo apt install leiningen
+  #- wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
+  #- chmod +x lein
+  #- sudo mv lein /usr/bin/
 services:
   - docker
 
