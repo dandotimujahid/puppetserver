@@ -44,7 +44,7 @@ jobs:
         - chmod +x docker-compose
         - sudo mv docker-compose /usr/local/bin
         - mkdir -vp ~/.docker/cli-plugins
-        - curl --location https://github.com/docker/buildx/releases/download/v${DOCKER_BUILDX_VERSION}/buildx-v${DOCKER_BUILDX_VERSION}.linux-amd64 > ~/.docker/cli-plugins/docker-buildx
+        - curl --location https://github.com/docker/buildx/releases/download/v${DOCKER_BUILDX_VERSION}/buildx-v${DOCKER_BUILDX_VERSION}.linux-s390x > ~/.docker/cli-plugins/docker-buildx
         - chmod +x ~/.docker/cli-plugins/docker-buildx
         - docker buildx create --name travis_builder --use
       script:
