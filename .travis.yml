@@ -1,23 +1,23 @@
 language: clojure
 sudo: required
 #group: edge
-#lein: 2.9.1 
+lein: lein1 
 #dir: /home/travis
 dist: bionic
 arch: s390x
 
 before_install:
   - sudo apt-get update
-  - sudo apt update && sudo apt install leiningen
-  - cd $HOME/bin
+  #- sudo apt update && sudo apt install leiningen
+  #- cd $HOME/bin
   #- curl https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein > lein
   #- sudo mv lein /usr/local/bin/lein
   #- sudo chmod a+x /usr/local/bin/lein
   #- PATH="$HOME/bin:$PATH"
   #- sudo apt-get install -y bash curl rlwrap
-  - curl -O https://download.clojure.org/install/linux-install-1.10.2.774.sh
-  - chmod +x linux-install-1.10.2.774.sh
-  - sudo ./linux-install-1.10.2.774.sh
+  #- curl -O https://download.clojure.org/install/linux-install-1.10.2.774.sh
+  #- chmod +x linux-install-1.10.2.774.sh
+  #- sudo ./linux-install-1.10.2.774.sh
   
   #- sudo chmod +x  /usr/local/bin/
   #- cd /home/travis
