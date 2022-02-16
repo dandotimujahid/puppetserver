@@ -1,7 +1,7 @@
 language: clojure
 sudo: required
 #group: edge
-lein: lein1 
+lein: lein2 
 #dir: /home/travis
 dist: bionic
 arch: s390x
@@ -32,7 +32,6 @@ services:
   - docker
 
 script:
-  #- cd /home/travis
   - ./ext/travisci/test.sh
   - $TRAVIS_BUILD_DIR/ext/travisci/secscan.sh "$TRAVIS_BUILD_DIR/src/clj" "clj"
 jobs:
