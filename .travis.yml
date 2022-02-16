@@ -1,7 +1,7 @@
 language: clojure
 sudo: required
 #group: edge
-lein: lein2 
+lein2: 
 #dir: /home/travis
 dist: bionic
 arch: s390x
